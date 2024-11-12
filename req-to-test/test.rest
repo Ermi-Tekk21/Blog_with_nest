@@ -1,0 +1,68 @@
+# Create a New Blog Post
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+  "title": "Understanding Dependency Injection in NestJS",
+  "content": "Dependency Injection (DI) is a powerful concept in NestJS...",
+  "author": "Ermias Teklemarkos",
+  "tags": ["NestJS", "Dependency Injection", "Backend"]
+}
+
+###
+
+# Fetch All Blog Posts
+GET http://localhost:3000/posts
+Accept: application/json
+
+###
+
+# Fetch a Single Blog Post by ID
+GET http://localhost:3000/posts/1
+Accept: application/json
+
+###
+
+# Update a Blog Post by ID
+PUT http://localhost:3000/posts/1
+Content-Type: application/json
+
+{
+  "title": "Understanding Dependency Injection in NestJS (Updated)",
+  "content": "Updated content with more details on DI patterns...",
+  "author": "Ermias Teklemarkos",
+  "tags": ["NestJS", "Dependency Injection", "Backend", "TypeScript"]
+}
+
+###
+
+# Delete a Blog Post by ID
+DELETE http://localhost:3000/posts/1
+
+###
+
+# Add a Comment to a Blog Post
+POST http://localhost:3000/posts/1/comments
+Content-Type: application/json
+
+{
+  "author": "Jane Doe",
+  "content": "Great post! Really helped me understand DI in NestJS."
+}
+
+###
+
+# Fetch All Comments for a Blog Post
+GET http://localhost:3000/posts/1/comments
+Accept: application/json
+
+###
+
+# Fetch a Single Comment by ID
+GET http://localhost:3000/posts/1/comments/1
+Accept: application/json
+
+###
+
+# Delete a Comment by ID
+DELETE http://localhost:3000/posts/1/comments/1
